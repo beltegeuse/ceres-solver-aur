@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 url="http://ceres-solver.org/"
 license=('LGPL')
 makedepends=('cmake')
-depends=('google-glog>=0.3.4' 'eigen>=3.3.0'
+depends=('eigen>=3.3.0'
       'suitesparse>=4.4.5')
 optdepends=('openmp')
 source=("http://ceres-solver.org/ceres-solver-1.14.0.tar.gz")
@@ -19,6 +19,7 @@ _cmakeopts=('-D CMAKE_BUILD_TYPE=Release'
             '-D CMAKE_INSTALL_PREFIX=/usr'
             '-D EIGENSPARSE=ON'
             '-D CXX11=ON'
+	    '-D MINIGLOG=ON'
             '-D BUILD_SHARED_LIBS=ON'
             '-D BUILD_TESTING=OFF'
             '-D BUILD_EXAMPLES=OFF')
